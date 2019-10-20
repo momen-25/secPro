@@ -1,0 +1,24 @@
+<template name ='nav'>
+	<nav style="width: 100%; height: 70px; background-color: blue ; margin: 0px " class="navHeight">
+		<div class="container">
+		         {{#if currentUser}}
+                        <a class="link-purple btn btn-danger logout" href="#" id="logout-link" type="button" style="margin-top: 17px"><i class="fa fa-sign-out"></i>logout</a>
+                      {{#with myMarket}}
+                        <a href="/market/{{_id}}" class="link-purple btn btn-info " type="button" style="margin-top: 17px;margin-left: 40px"> {{brandName}} </a> 
+
+                      {{else}}  
+                       <a href="/market" class="link-purple btn btn-info " type="button" style="margin-top: 17px;margin-left: 40px"> New market </a> 
+                       {{/with}}
+                       {{#with myOrders}}
+
+                       <a href="/myOrders/{{userName}}" class="link-purple btn btn-danger " type="button" style="margin-top: 17px;margin-left: 40px; float: right;"> {{userName}} orders </a> 
+                       {{else}}
+                       {{/with}}
+                {{else}}
+
+                {{/if}}
+            </div>
+		
+	</nav>
+	
+</template>

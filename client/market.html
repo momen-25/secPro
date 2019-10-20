@@ -1,0 +1,142 @@
+<template name = "market">
+
+	<div class="container back " style="background-color: #f2f2f2">
+	 {{#if currentUser}}
+	 {{#with NewMarket}}
+	 <div class="row">
+
+	 	<div class="col-md-3" style="text-align: center;">
+	 		 <div>	
+
+	           <div class="marketlogo" style="width: 100%;height: 100% ; border-radius: 50%; margin: 50px" >
+	              <img src="{{logo}}" width="100%" height="100%" style="border-radius: 50%">
+	           </div>
+
+             </div>	 
+	 
+	 	
+	 	</div>
+	 	<div class="col-md-7">
+ 			<h1 style="font-size: 50px; margin-top: 245px;margin-left: 65px;font-weight: bolder;" >
+	 			{{brandName}}
+	 		</h1>
+	 	</div>
+	 </div>
+
+	 <div class="row">
+	 	<div class="col-md-12">
+	 		<h1> your product</h1>
+
+
+	 		<div style="width: 100% ;height: 300px">
+	 	 {{#each pro}}
+		     <div class="col-md-3 col-sm-4 col-xs-6 homeUnite" style="background-color: #fff;border :0px; margin-left: 20px">
+			    <div class="homeUnite-img" >
+				<img src="{{mainImg}}" width="100%" height="100%">
+			  </div>
+
+			 <div class="homeUnite-description">
+			    	{{dis}}
+				   <br>
+				   {{price}}
+				   <br>
+
+				 <a href="/product/{{_id}}"  class="link-purple btn btn-info">view more</a>
+
+				
+		     </div>
+		    </div>
+		{{/each}}
+	 		</div>
+	 		
+	 	</div>
+	 	
+	 </div>
+
+	 <div class="row">
+	 	<div class="col-md-12" style="text-align: center;padding: 20px">
+	 		<a class="link-purple btn btn-danger" href="/productUpload" style="padding: 20px;font-size: 20px;font-weight: bold;border-radius: 5px;margin-bottom: 50px; margin-top: 70px"> add a new product </a>
+	 		
+	 	</div>
+	 	
+	 </div>
+
+	 
+
+	 <div style="background-color: #fff ; margin-bottom: 40px ; padding: 30px" >
+	 	<h1 style="font-weight: bolder;font-size: 40px;text-align: center;">orders</h1>
+{{#each order}}
+<div class="row">
+	<div style=" height: 130px" class="col-md-2"><img src="{{img}}" width="100%" height="100%"></div>
+	<div class="col-md-10">
+       <h1>{{userName}}</h1>
+       <a href="/orders/{{_id}}" class="btn btn-primary" target="_blank">view prodect</a>
+       <button class="btn btn-primary timer">Start Time</button>
+       <p class="demo1" style="font-size: 30px; color: red; margin-top: 70px;word-spacing: 0px;letter-spacing: 5px;"></p>
+
+	</div>
+
+  </div>     
+        <div style="width: 100%;height: 1px;background-color: #f2f2f2;margin-top: 10px; margin-bottom: 10px"></div>
+ 
+	 {{/each}}
+     </div>
+
+	 {{else}}
+
+      <form class="marketForm">
+      	<div class="row">
+      		 <div style="float: right;">	
+	           <div class="marketlogo" style="width: 200px;height: 200px ; border-radius: 50%; margin: 40px" >
+	              <img src="../765-default-avatar.png" width="100%" height="100%" style="border-radius: 50%">
+	           </div>
+
+	             <input type="file" style="margin-bottom: 10px" class="brandLogo">
+             </div>
+
+      		
+      	</div>
+      	<div class="row" style="margin-top: 20px">
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">the brand name</label>
+                  <input type="text" class="form-control brandName " id="formGroupExampleInput" placeholder="the brand name">
+              </div>
+
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">facebook page</label>
+                  <input type="text" class="form-control facePage" id="formGroupExampleInput" placeholder="facebook page">
+              </div>
+      		
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">phone number</label>
+                  <input type="text" class="form-control phNum" id="formGroupExampleInput" placeholder="phone number">
+              </div>
+
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">describe your main location</label>
+                  <input type="text" class="form-control mainLocation" id="formGroupExampleInput" placeholder="...">
+              </div>
+
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">describe your other location</label>
+                  <input type="text" class="form-control secLocation" id="formGroupExampleInput" placeholder="optional">
+              </div>
+
+      		  <div class="form-group col-md-7">
+                  <label for="formGroupExampleInput">describe your other location</label>
+                  <input type="text" class="form-control thirdLocation" id="formGroupExampleInput" placeholder="optional">
+              </div>
+
+      	</div>
+      	<div class="row">
+      		<div class="col-md-12">
+    	      <button type="submit" class="btn btn-primary" style="margin-left: 45%;margin-top: 20px"> Upload </button>
+      		</div>
+      	</div>
+      	
+      </form>
+     {{/with}}
+     {{/if}}
+	</div>
+	
+</template>

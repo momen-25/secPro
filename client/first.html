@@ -1,0 +1,28 @@
+<template name = 'first'>
+	<div class="row firstpage" style="width: 100% ; height: 100%">
+
+      {{#if currentUser}}
+		<div class="col-md-3 col-sm-3 col-xs-3 thelogSec" style="background-color: #f2f2f2; height: 250%">
+			{{>enter}}
+
+			
+		</div>
+	    <div class="col-md-9 col-sm-9 col-xs-9" style="background-color: white; height: 100%">
+			{{>home}}
+		</div>
+
+		{{else}}
+				<div class="col-md-3 col-sm-3 col-xs-3 thelogSec" style="background-color: #f2f2f2; height: 100%">
+			{{>enter}}
+
+			
+		</div>
+		<div class="col-md-9 col-sm-9 col-xs-9" style="background-color: white; height: 100%">
+			{{>home}}
+		</div>
+
+		{{/if}}
+		
+	</div>
+	
+</template>

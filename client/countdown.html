@@ -1,0 +1,40 @@
+<template name="countdown">
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+
+
+// Set the date we're counting down to
+
+
+var x = new Date().getTime() + 60000;
+
+// Set the date we're counting down to
+
+// Update the count down every 1 second
+var M = setInterval(function() {
+
+var d = x - new Date().getTime();
+var hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((d % (1000 * 60)) / 1000);
+var fin = (60000 - d )/(1000);
+var finM = fin / 60;
+console.log("hours" , hours , "minutes" , minutes , "second" , seconds );
+ if (hours==0 && minutes==0 && seconds == 0) {
+ 	console.log('done');
+ }
+
+   if (d < 0) {
+    clearInterval(M);
+    console.log('finsh')
+  }
+
+
+
+}, 1000);
+</script>
+
+</template>

@@ -1,0 +1,41 @@
+<template name="login">
+      <div class="container"> 
+
+  {{#if currentUser}}
+  <h3 class="black">You are logged in. return <a href="/jokes">home</a></h3>
+  {{else}}
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Account Login</h2>
+    <label for="email" class="sr-only">Email Address</label>
+    <input type="email" name="email" id="email" class="form-control" placeholder="Email Address">
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+    <button type="submit" id="login-btn" class="btn btn-lg btn-primary btn-block">Log In</button>
+    <p>No Account? <a href="/signup">Create Account</a></p>
+  </form>
+  {{/if}}
+</div>
+</template>
+
+<template name="signup">
+      <div class="container"> 
+
+  {{#if currentUser}}
+  <h3 class="white">You are logged in. return <a href="/">home</a></h3>
+  {{else}}
+  <form class="form-signup" id="register-form">
+    <h2 class="form-signin-heading">Create Account</h2>
+    <label for="username" class="sr-only">User Name</label>
+    <input type="text" name="username" id="username" class="form-control" placeholder="User Name">
+    <label for="email" class="sr-only">Email Address</label>
+    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Choose Password">
+    <label for="password2" class="sr-only">Password Confirm</label>
+    <input type="password" name="password2" id="password2" class="form-control" placeholder="Password Confirm">
+    <button type="submit" id="login-btn" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+
+  </form>
+  {{/if}}
+</div>
+</template>

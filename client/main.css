@@ -1,0 +1,42 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+
+.homeUnite{
+	height: 470px;
+	background-color: #f2f2f2;
+	border-left: 15px solid #fff;
+	margin-top: 20px;
+	padding: 0px;
+    border-bottom-right-radius:  15px;
+    	cursor: pointer;
+
+}
+
+
+
+.homeUnite-img{
+	height: 70%;
+	width: 100%;
+	
+
+}
+
+.homeUnite-description{
+	height: 30%;
+	width: 100%;
+    border-bottom-right-radius:  15px;
+    text-align: center;
+    padding-top: 10px
+}
+
+.sacImg{
+	cursor: pointer;
+	
+}
+
+.TimerDisplay{
+	display: none !important ;
+}

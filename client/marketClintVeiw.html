@@ -1,0 +1,72 @@
+<template name = 'marketClintVeiw'>
+		<div class="container back " style="background-color: #f2f2f2">
+			{{#with clintVeiw}}
+	     <div class="row">
+
+	 	<div class="col-md-3" style="text-align: center;">
+	 		 <div>	
+
+	           <div class="marketlogo" style="width: 100%;height: 100% ; border-radius: 50%; margin: 40px" >
+	              <img src="{{logo}}" width="100%" height="100%" style="border-radius: 50%">
+	           </div>
+
+             </div>	 
+	 
+	 	
+	 	</div>
+
+	 	<div class="col-md-7">
+ 			<h1 style="font-size: 50px; margin-top: 170px;margin-left: 45px;font-weight: bolder;" >
+	 			{{brandName}}
+	 		</h1>
+	 	</div>
+
+	 </div>
+
+	 <div class="row">
+	 	<div class="col-md-12">
+	 		<h1> brand product</h1>
+
+
+	 		<div style="width: 100% ; height: 470px">
+	 	  {{#each pro}}
+		     <div class="col-md-3 col-sm-4 col-xs-6 homeUnite" style="background-color: #fff; margin-bottom: 100px;border :0px; margin-left: 20px">
+			    <div class="homeUnite-img" >
+				<img src="{{mainImg}}" width="100%" height="100%">
+			  </div>
+
+			 <div class="homeUnite-description">
+			    	{{dis}}
+				   <br>
+				   {{price}}
+				   <br>
+
+				 <a href="/product/{{_id}}"  class="link-purple btn btn-info">view more</a>
+
+				
+		     </div>
+		    </div>
+		{{/each}}
+	 			
+	 		</div>
+	 		
+	 	</div>
+	 	
+	 </div>
+	 <div class="row" style="margin-bottom: 90px">
+	 	<div class="col-md-12">
+	 		<h1>Contact Us</h1>
+	 		<span>our number {{number}} </span><br>
+	 		<span>our facebook page </span> <a href="{{facebook}}"> {{facebook}}</a>
+	 		
+	 	</div>
+	 	
+	 </div>
+
+
+			{{else}}
+			{{/with}}
+		</div>
+
+	
+</template>

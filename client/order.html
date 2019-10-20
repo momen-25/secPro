@@ -1,0 +1,32 @@
+<template name = " order ">
+	<div class="container">
+		{{#with order}}
+		<div class="raw">
+			<div class="col-md-5" style="height: 600px; padding-top: 50px" >
+			    <div class="mainImgPro" style="width: 100% ; height: 80%">
+			    	<img src="{{img}}" width="100%" height="100%">
+		    	</div>
+
+			
+			 </div>
+			<div class="col-md-7" style="text-align: center ; padding-top: 50px">
+		
+				<h2> {{userName}}</h2>
+				<button class="btn btn-success  timer " style="padding: 20px ; font-size: 40px; margin-top: 50px">Accept</button>
+				{{#with timer}}
+				<p class="demo" style="font-size: 30px; color: red; margin-top: 70px;word-spacing: 0px;letter-spacing: 5px;"> {{hours}}h {{minutes}}m {{seconds}}s</p>
+				{{/with}}	
+				
+			</div>
+			
+		</div>
+		
+	
+         {{else}}
+
+         {{/with}}
+			
+		</div>
+
+	
+</template>

@@ -1,0 +1,82 @@
+<template name = "productUpload">
+	<div class="container">
+		{{#if currentUser}}
+  
+    
+            <form class="edit-profile" enctype="multipart/form-data">
+            	<div class="raw">
+            <div class="col-md-4">
+              <img src="../765-default-avatar.png" class="profile-img" width="100%" >
+
+              <label for="profileImage">Choose your main Image</label>
+              <br>
+              <input type="file" name="profileImage"  class="black mainPic">
+              
+              </div>
+
+
+              <div  class='col-md-4'>
+              <img src="../765-default-avatar.png" class="profile-img " width="100%" >
+
+              <label for="profileImage">Choose your Image</label>
+              <br>
+              <input type="file" name="profileImage" id="profileImage" class="secPic">
+              
+              </div>
+
+
+              <div  class="col-md-4">
+              <img src="../765-default-avatar.png" class="profile-img" width="100%" >
+
+              <label for="profileImage">Choose your Image</label>
+              <br>
+              <input type="file" name="profileImage" id="profileImage" class="thirdPic">
+              
+              </div> 
+              </div>
+
+              <div class="raw" style="padding-top:  40px">
+              	<div class="col-md-6">
+              		<select class="product-type">
+              			<option>trousers</option>
+              			<option>T-shirt</option>
+              			<option>short</option>
+              		</select>
+             
+              	</div>
+
+              	<div class="col-md-6">
+              		<label>av colors</label>
+              		<input type="text" name="" class="product-color">
+
+              	</div>
+              </div>
+              <div class="raw">
+              	<div class="col-md-6">
+              		<label>discription</label>
+              		<textarea class="discription">
+              			
+              		</textarea>
+              	</div>
+              	<div class="col-md-6">
+              		<label>price</label>
+              		<input type="text" name="" class="price">
+              		
+              	</div>
+              	
+              </div>
+              <button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary" style="margin-top: 60px">Upload product</button>
+            </form> 		
+   
+
+
+  
+
+
+
+
+  {{/if}}  
+	
+
+	</div>
+</template>

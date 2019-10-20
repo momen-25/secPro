@@ -1,0 +1,32 @@
+<template name = "enter">
+
+	       <div style=" " class="thebtn">
+                {{#if currentUser}}
+            <div style="width: 100%;height: 100%;background-color: #f2f2f2;float: left;">
+
+			<form class="typePro">
+				<h1 style="margin-left: -70px">sort by type</h1><br>
+				<input type="radio" class="typeValue" value="trousers" name="trousers"> trousers<br>
+				<input type="radio" class="typeValue" value="T-shirt"> T-shirt<br>
+				<input type="radio" class="typeValue" value="short"> short
+				<button type="submit" >search</button>
+
+			</form>
+
+	
+
+			
+
+
+	 	
+	        </div>
+                {{else}}
+            <div style="width: 100%;height: 100%;background-color: blue;float: left;">
+
+                </div>         <a class="btn btn-success" href="/login" id="login-link" type="button"><i class="fa fa-sign-in"></i>login</a>
+                {{/if}}
+              </div>
+        
+         
+	
+</template>
